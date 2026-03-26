@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 1 - Controle de Gastos do Mês</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        font-size: 1.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Controle de Gastos do Mês</h1>
+    <div id="res"></div>
+
+    <script>
+      let salario = Number(window.prompt('Digite o valor do seu salário mensal:\nExemplo: 2500'));
+      let aluguel = Number(window.prompt('Digite o valor gasto com aluguel:\nExemplo: 800'));
+      let alimentação = Number(
+        window.prompt('Digite o valor gasto com alimentação:\nExemplo: 600')
+      );
+      let transporte = Number(window.prompt('Digite o valor gasto com transporte:\nExemplo: 300'));
+      let res = window.document.getElementById('res');
+
+      let salarioRestante = salario - aluguel - alimentação - transporte;
+      let totalGastos = aluguel + alimentação + transporte;
+
+      res.innerHTML = `<h2>Salário Mensal</h2>`;
+      res.innerHTML += `<p>Seu salário mensal é de <strong>${salario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong> reais.</p>`;
+      res.innerHTML += `<h2>Gastos do Mês</h2>`;
+      res.innerHTML += `<p>Aluguel: <strong>${aluguel.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong> reais.</p>`;
+      res.innerHTML += `<p>Alimentação: <strong>${alimentação.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong> reais.</p>`;
+      res.innerHTML += `<p>Transporte: <strong>${transporte.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong> reais.</p>`;
+      res.innerHTML += `<p>Total de despesas no mês: <strong>${totalGastos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong> reais.</p>`;
+      res.innerHTML += `<h2>Análise de Gastos</h2>`;
+      res.innerHTML += `<p>Seu salário restante após as despesas é de <strong>${salarioRestante.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong> reais.</p>`;
+      res.innerHTML += `<p>Você gastou <strong>${((totalGastos / salario) * 100).toFixed(2)}%</strong> do seu salário com despesas mensais.</p>`;
+    </script>
+  </body>
+</html>
