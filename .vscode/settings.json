@@ -231,8 +231,8 @@
     "Usuario",
     "WEBPUSH"
   ],
-  "workbench.colorTheme": "Rosé Pine Moon",
-  "workbench.statusBar.visible": true,
+  "workbench.colorTheme": "Origamid Next Future",
+  "workbench.statusBar.visible": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
